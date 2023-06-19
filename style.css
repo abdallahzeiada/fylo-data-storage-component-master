@@ -1,0 +1,195 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("images/bg-mobile.png") center/cover no-repeat;
+}
+body .container {
+  width: 90%;
+}
+body .container header {
+  background-color: hsl(228, 56%, 26%);
+  width: 100%;
+  padding: 40px;
+  border-radius: 10px 100px 10px 10px;
+  margin-bottom: 15px;
+}
+body .container header ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+body .container header ul li {
+  width: 50px;
+  height: 50px;
+  background-color: hsl(229, 57%, 11%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+body .container main {
+  width: 100%;
+  background-color: hsl(228, 56%, 26%);
+  padding: 40px;
+  border-radius: 10px;
+  position: relative;
+}
+body .container main p {
+  color: hsl(243, 100%, 93%);
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+body .container main p span {
+  font-weight: 700;
+  margin: 0 3px;
+}
+body .container main .slider {
+  position: relative;
+}
+body .container main .slider input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 100%;
+  border-radius: 20px;
+  height: 25px;
+  position: relative;
+  background-color: rgba(12, 18, 44, 0.5);
+}
+body .container main .slider input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 11px;
+  height: 11px;
+  background-color: hsl(243, 100%, 93%);
+  border-radius: 50%;
+  position: absolute;
+  right: 3px;
+  top: 45%;
+  transform: translateY(-50%);
+}
+body .container main .slider input::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+          appearance: none;
+  position: absolute;
+  left: 3px;
+  background-image: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  border-radius: 20px;
+  height: 15px;
+  margin-top: 2.5px;
+  width: 81.5%;
+}
+body .container main .slider .labels {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transform: translateY(5px);
+}
+body .container main .slider .labels label {
+  color: hsl(243, 100%, 93%);
+  font-weight: 700;
+  font-size: 12px;
+}
+body .container main .left {
+  width: 70%;
+  background-color: hsl(243, 100%, 93%);
+  padding: 20px;
+  border-radius: 15px;
+  position: absolute;
+  font-size: 50px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: hsl(229, 57%, 11%);
+  bottom: -80px;
+  right: 50%;
+  transform: translateX(50%);
+}
+body .container main .left span {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: hsl(229, 7%, 55%);
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 401px) {
+  body {
+    background: url("images/bg-desktop.png") center/cover no-repeat;
+  }
+  body .container {
+    width: 65%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    transform: translateY(-10px);
+  }
+  body .container header {
+    width: 38%;
+    margin: 0;
+  }
+  body .container header ul {
+    margin-top: 30px;
+    gap: 15px;
+  }
+  body .container header ul li {
+    width: 50px;
+    height: 50px;
+  }
+  body .container main {
+    width: 58.7%;
+    padding-top: 45px;
+  }
+  body .container main p {
+    font-size: 14px;
+    letter-spacing: -0.3px;
+    transform: translateY(-8px);
+  }
+  body .container main p span {
+    margin: 0;
+  }
+  body .container main .slider {
+    transform: translateY(-5px);
+  }
+  body .container main .slider input {
+    height: 20px;
+  }
+  body .container main .slider input::-webkit-slider-runnable-track {
+    width: 74%;
+    margin: 0;
+  }
+  body .container main .left {
+    top: -50px;
+    bottom: auto;
+    right: 130px;
+    width: 33.33%;
+    border-radius: 10px;
+    font-size: 40px;
+    padding: 13px;
+  }
+  body .container main .left span {
+    font-size: 14px;
+  }
+  body .container main .left::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 40px;
+    background-color: hsl(243, 100%, 93%);
+    bottom: -10px;
+    right: 0;
+    transform: skewY(45deg);
+  }
+}/*# sourceMappingURL=style.css.map */

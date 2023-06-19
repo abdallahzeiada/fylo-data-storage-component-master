@@ -1,0 +1,128 @@
+$Gradient0: hsl(6, 100%, 80%);
+$Gradient1: hsl(335, 100%, 65%);
+$PaleBlue: hsl(243, 100%, 93%);
+$GrayishBlue: hsl(229, 7%, 55%);
+$DarkBlue: hsl(228, 56%, 26%);
+$VeryDarkBlue: hsl(229, 57%, 11%);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Raleway", sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("images/bg-mobile.png") center/cover no-repeat;
+  .container {
+    width: 90%;
+    header {
+      background-color: $DarkBlue;
+      width: 100%;
+      padding: 40px;
+      border-radius: 10px 100px 10px 10px;
+      margin-bottom: 15px;
+      ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-top: 40px;
+        li {
+          width: 50px;
+          height: 50px;
+          background-color: $VeryDarkBlue;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 10px;
+        }
+      }
+    }
+    main {
+      width: 100%;
+      background-color: $DarkBlue;
+      padding: 40px;
+      border-radius: 10px;
+      position: relative;
+      p {
+        color: $PaleBlue;
+        font-weight: 400;
+        span {
+          font-weight: 700;
+          margin: 0 3px;
+        }
+        margin-bottom: 15px;
+      }
+      .slider {
+        position: relative;
+        input {
+          appearance: none;
+          width: 100%;
+          border-radius: 20px;
+          height: 25px;
+          position: relative;
+          background-color: rgba($color: $VeryDarkBlue, $alpha: 0.5);
+          &::-webkit-slider-thumb {
+            appearance: none;
+            width: 11px;
+            height: 11px;
+            background-color: $PaleBlue;
+            border-radius: 50%;
+            position: absolute;
+            right: 3px;
+            top: 45%;
+            transform: translateY(-50%);
+          }
+          &::-webkit-slider-runnable-track {
+            appearance: none;
+            position: absolute;
+            left: 3px;
+            background-image: linear-gradient(90deg, $Gradient0, $Gradient1);
+            border-radius: 20px;
+            height: 15px;
+            margin-top: 2.5px;
+            width: 81.5%;
+          }
+        }
+        .labels {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          transform: translateY(5px);
+          label {
+            color: $PaleBlue;
+            font-weight: 700;
+            font-size: 12px;
+          }
+        }
+      }
+      .left {
+        width: 70%;
+        background-color: $PaleBlue;
+        padding: 20px;
+        border-radius: 15px;
+        position: absolute;
+        font-size: 50px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $VeryDarkBlue;
+        bottom: -80px;
+        right: 50%;
+        transform: translateX(50%);
+        span {
+          font-size: 18px;
+          text-transform: uppercase;
+          color: $GrayishBlue;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
+@import "mediaQuery";
